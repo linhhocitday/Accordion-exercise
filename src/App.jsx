@@ -51,7 +51,10 @@ const App = () => {
 
   const renderSections = sections.map((section) => (
     <li key={section.id} data-active={section.active}>
-      <HighlightSection onClick={() => activeSection(section.id)}>
+      <HighlightSection
+        active={section.active}
+        onClick={() => activeSection(section.id)}
+      >
         {section.title}
       </HighlightSection>
       <HiddenContent>{section.content}</HiddenContent>

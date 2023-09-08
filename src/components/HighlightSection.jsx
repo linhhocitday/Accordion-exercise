@@ -1,10 +1,10 @@
 import React from "react";
 
-const HighlightSection = ({ children, onClick }) => {
+const HighlightSection = ({ children, onClick, active }) => {
   return (
     <div className="section" onClick={onClick}>
       <p>{children}</p>
-      <div className="symbol">+</div>
+      <div className="symbol">{active ? "-" : "+"}</div>
     </div>
   );
 };
